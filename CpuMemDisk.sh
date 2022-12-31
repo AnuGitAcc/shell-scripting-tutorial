@@ -7,7 +7,7 @@
 # WebSite: https://server-computer.com
 # Author: Ankam Ravi Kumar
 
-HOSTNAME=$(hostname)
+HOSTNAME=(hostname)
 DATET=$(date "+%Y-%m-%d %H:%M:%S")
 CPUUSAGE=$(top -b -n 2 -d1 | grep "Cpu(s)" | tail -n1 | awk '{print $2}' |awk -F. '{print $1}')
 MEMUSAGE=$(free | grep Mem | awk '{print $3/$2 * 100.0}')
